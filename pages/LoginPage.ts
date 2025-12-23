@@ -3,7 +3,7 @@ import { Page } from '@playwright/test';
 export class LoginPage {
     constructor(private page: Page) {}
 
-    //Locators
+    // LogIn Locators
     emailInput = this.page.getByPlaceholder('Your email');
     passwordInput = this.page.getByPlaceholder('Your password');
     loginButton = this.page.getByRole('button', { name: 'Login' });
