@@ -4,17 +4,17 @@ export class RegisterPage {
     constructor(private page: Page) {}
 
     //Locators
-    firstNameInput = this.page.getByPlaceholder('First Name *');
-    lastNameInput = this.page.getByPlaceholder('Last Name *');
+    firstNameInput = this.page.getByPlaceholder('First name *');
+    lastNameInput = this.page.getByPlaceholder('Your last name *');
     dateOfBirthInput = this.page.getByPlaceholder('YYYY-MM-DD');
-    streetInput = this.page.getByPlaceholder('your street *');
-    postalCodeInput = this.page.getByPlaceholder('your postcode *');
-    cityInput = this.page.getByPlaceholder('your city *');
-    stateInput = this.page.getByPlaceholder('your state *');
+    streetInput = this.page.getByPlaceholder('Your street *');
+    postalCodeInput = this.page.getByPlaceholder('Your postcode *');
+    cityInput = this.page.getByPlaceholder('Your city *');
+    stateInput = this.page.getByPlaceholder('Your state *');
     countrySelect = this.page.getByRole('combobox', { name: 'Country' });
-    phoneInput = this.page.getByPlaceholder('Phone *');
-    emailInput = this.page.getByPlaceholder('Email *');
-    passwordInput = this.page.getByPlaceholder('Password');
+    phoneInput = this.page.getByPlaceholder('Your phone *');
+    emailInput = this.page.getByPlaceholder('Your email *');
+    passwordInput = this.page.getByPlaceholder('Your password');
     registerButton = this.page.getByRole('button', { name: 'Register' });
 
     //Actions

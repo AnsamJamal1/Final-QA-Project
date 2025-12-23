@@ -4,8 +4,8 @@ export class LoginPage {
     constructor(private page: Page) {}
 
     //Locators
-    emailInput = this.page.getByPlaceholder('your email');
-    passwordInput = this.page.getByPlaceholder('your password');
+    emailInput = this.page.getByPlaceholder('Your email');
+    passwordInput = this.page.getByPlaceholder('Your password');
     loginButton = this.page.getByRole('button', { name: 'Login' });
 
     //Actions

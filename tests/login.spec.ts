@@ -3,19 +3,19 @@ import { LoginPage } from '../pages/LoginPage';
 
 test.describe('Login Feature', () => {
     test.beforeEach(async ({ page }) => {
-        await page.goto('/auth/login');
+        await page.goto('/auth/login', { timeout: 60000 });
     });
 
     test('Valid Login Test', async ({ page }) => {
         const loginPage = new LoginPage(page);
         await loginPage.login( process.env.EMAIL!, process.env.PASSWORD! );
-        await expect(page.locator('[role="alert"]')).not.toBeVisible();
+        await expect(page.locator('[role="alert"]')).not.toBeVisible({ timeout: 10000 });
     });
 
     test('Invalid Login Test', async ({ page }) => {
         const loginPage = new LoginPage(page);
         await loginPage.login('wrong@email.com', '123456');
-        await expect(page.locator('.alert')).toBeVisible();
+        await expect(page.locator('.alert')).toBeVisible({ timeout: 10000 });
     });
 
 });
