@@ -3,7 +3,7 @@ import { Page } from '@playwright/test';
 export class RegisterPage {
     constructor(private page: Page) {}
 
-    //Locators
+    // Registers Locators
     firstNameInput = this.page.getByPlaceholder('First name *');
     lastNameInput = this.page.getByPlaceholder('Your last name *');
     dateOfBirthInput = this.page.getByPlaceholder('YYYY-MM-DD');
